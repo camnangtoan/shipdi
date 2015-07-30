@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'timeorder_id:datetime',
             // 'levy_id',
             // 'statusorder_id',
-             'statusCOD',
+            // 'statusCOD',
              'note:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],

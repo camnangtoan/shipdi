@@ -133,3 +133,6 @@ a.desc:after {
     border: 1px solid white;
 }
 #map_canvas { margin: 0; padding: 0; height: 100% }
+.order-form{
+    width: 600px;
+}

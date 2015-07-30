@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 return [
-    'Status COD' =>'Trạng thái COD',
+    'Status COD' =>'Tiền COD thu hộ',
     'Create Statuscod' =>'Tạo trạng thái COD',
     'Statuscods' => 'Các trạng thái COD',
     'Search address'=>'Tìm kiếm địa chỉ',
@@ -24,9 +24,9 @@ return [
     'status order' =>'trạng thái đơn hàng',
     'Create Status order'=>'Tạo trạng thái đơn hàng',
     'Status orders'=>'Trạng thái các đơn hàng',
-    'Status COD' =>'Trạng thái thu hộ COD',
+    'Status COD' =>'Tiền COD thu hộ',
     'Status order' => 'Trạng thái đơn hàng',
-    'Form levy' =>'Hình thức thu tiền',
+    'Form levy' =>'Trả phí vận chuyển',
     'Time order' => 'Thời gian giao hàng',
     'Size' =>'Kích thước',
     'Weight' => 'Khối lượng',

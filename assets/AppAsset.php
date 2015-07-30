@@ -20,10 +20,9 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/ihover.css',
-        'css/searchmaps.css',
+        'css/map.css',
     ];
     public $js = [
-        'js/searchmaps.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
