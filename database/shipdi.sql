@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 29, 2015 at 03:28 PM
+-- Generation Time: Jul 30, 2015 at 04:48 PM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.9
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `auth_assignment` (
 
 INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 ('sysadmin', '2', 1437582562),
-('user', '1', 1437615742);
+('user', '1', 1438177748);
 
 -- --------------------------------------------------------
 
@@ -208,9 +208,8 @@ CREATE TABLE IF NOT EXISTS `formlevy` (
 --
 
 INSERT INTO `formlevy` (`id`, `type`, `content`) VALUES
-(1, 'COD', 'Tiền thu hộ cho Shop '),
-(2, 'Ship ', 'Tiền ship '),
-(3, 'Ship và COD ', 'Cả tiền Ship và tiền COD');
+(2, 'Khánh hàng trả phí', 'Tiền ship '),
+(3, 'Shop trả phí', 'Cả tiền Ship và tiền COD');
 
 -- --------------------------------------------------------
 
@@ -263,7 +262,16 @@ CREATE TABLE IF NOT EXISTS `order` (
   KEY `levy_id` (`levy_id`),
   KEY `statusorder_id` (`statusorder_id`),
   KEY `cod_id` (`cod_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`id`, `phonenumber`, `address`, `locationx`, `locationy`, `charges_id`, `shop_id`, `weight_id`, `size_id`, `timeorder_id`, `levy_id`, `statusorder_id`, `note`, `cod_id`) VALUES
+(1, '09878765463', '83 Hai Bà Trưng, Cửa Nam, Đống Đa, Hà Nội, Việt Nam', '21.027556', '105.841634', 1, 1, 1, 1, 1, 2, 1, 'dia chi shop', 1),
+(3, '09878765463', '179 Ngõ 200 Vĩnh Hưng, Vĩnh Hưng, Hai Bà Trưng, Hà Nội, Việt Nam', '20.9902783', '105.88018699999998', 1, 1, 1, 1, 1, 2, 1, 'don hang so 1', 1),
+(4, '01674773695', '36 Hàng Bông, Hàng Gai, Hoàn Kiếm, Hà Nội, Việt Nam', '21.030887', '105.84826599999997', 1, 1, 1, 1, 1, 2, 1, 'Don hang so 2', 1);
 
 -- --------------------------------------------------------
 
@@ -330,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `statuscod` (
 --
 
 INSERT INTO `statuscod` (`id`, `type`, `content`) VALUES
-(1, 'Shop đã thu ', 'Giửa khách hàng và Shop đã tự thanh toán với nhau '),
+(1, 'chỗ này để nhập', 'Giửa khách hàng và Shop đã tự thanh toán với nhau '),
 (2, 'Thu hộ Shop ', 'Shipdi phải thu hộ cho Shop ');
 
 -- --------------------------------------------------------
@@ -377,8 +385,8 @@ CREATE TABLE IF NOT EXISTS `timeorder` (
 --
 
 INSERT INTO `timeorder` (`id`, `type`, `content`) VALUES
-(1, 'Trong ngày', 'Là thời gian giao hàng trong ngày '),
-(2, 'Ngày mai ', 'Là thời gian ngày tiếp theo tính từ lúc nhận hàng '),
+(1, '9h ~ 12h', 'Là thời gian giao hàng trong ngày '),
+(2, '13h ~ 15h', 'Là thời gian ngày tiếp theo tính từ lúc nhận hàng '),
 (3, 'Trong tuần', 'Thời gian giao hàng trong tuần đó ');
 
 -- --------------------------------------------------------
